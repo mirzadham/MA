@@ -45,6 +45,14 @@ const trainings = [
     title: "PMP",
     image: "/images/pmp.png",
     pages: [1]
+  },
+  // Semiconductor Category (1 training)
+  {
+    id: 7,
+    category: "Semiconductor",
+    title: "Wafer Fabrication",
+    image: "/images/wafer-fabrication.png",
+    pages: [1]
   }
 ];
 

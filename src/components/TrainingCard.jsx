@@ -1,16 +1,30 @@
 function TrainingCard({ training, onClick }) {
+  const { id, title, image, category } = training;
+
   return (
-    <div className="card" onClick={() => onClick(training)}>
-      <div className="card-image-wrapper">
-        <img src={training.image} alt={training.title} />
-        <div className="card-icon">
+    <article
+      className="card-glassmorphic"
+      onClick={() => onClick(training)}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => e.key === 'Enter' && onClick(training)}
+      aria-label={`Explore ${title} training`}
+    >
+      <div className="card-image-3d">
+        <img src={image} alt={`${title} training visualization`} />
+        <div className="card-image-overlay"></div>
+        <div className="card-glow-accent"></div>
+      </div>
+
+      <div className="card-content">
+        <span className="card-category">{category}</span>
+        <h3 className="card-title">{title}</h3>
+        <div className="card-cta-link">
+          <span>More Details</span>
           <i className="fas fa-arrow-right"></i>
         </div>
       </div>
-      <div className="card-body">
-        <h3 className="card-title">{training.title}</h3>
-      </div>
-    </div>
+    </article>
   );
 }
 
