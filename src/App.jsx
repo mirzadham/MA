@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Header from './components/Header';
 import CategorySection from './components/CategorySection';
 import Modal from './components/Modal';
@@ -7,6 +7,16 @@ import trainings from './data/trainings';
 function App() {
   const [selectedTraining, setSelectedTraining] = useState(null);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const openModal = (training) => {
     setScrollPosition(window.scrollY);
@@ -32,7 +42,7 @@ function App() {
 
   return (
     <div className="app">
-      <Header />
+      <Header isScrolled={isScrolled} />
       <main>
         {Object.entries(groupedTrainings).map(([category, items]) => (
           <CategorySection

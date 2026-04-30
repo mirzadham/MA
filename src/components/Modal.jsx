@@ -20,7 +20,7 @@ function Modal({ training, onClose }) {
     <div className="modal-overlay" onClick={handleOverlayClick}>
       <div className="modal-content">
         <button className="modal-close" onClick={onClose} aria-label="Close modal">
-          &times;
+          <i className="fas fa-times"></i>
         </button>
         <img src={training.image} alt={training.title} />
       </div>
