@@ -30,7 +30,7 @@ function CategoryFilter({ categories, selectedCategory, onCategoryChange }) {
             value={selectedCategory}
             onChange={(e) => onCategoryChange(e.target.value)}
           >
-            <option value="All">All Categories</option>
+            <option value="All">All Programs</option>
             {categories.map(category => (
               <option key={category} value={category}>
                 {category}
