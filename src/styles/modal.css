@@ -68,12 +68,33 @@
 }
 
 .pages-container img {
-  max-width: calc(50% - 0.5rem);
-  max-height: 90vh;
   object-fit: contain;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-2xl);
+  animation: imageFadeIn 0.25s ease-out;
 }
+
+.pages-container.spread-1 img {
+  max-width: 100%;
+  max-height: 85vh;
+}
+
+.pages-container.spread-2 img {
+  max-width: calc(50% - 0.5rem);
+  max-height: 85vh;
+}
+
+@keyframes imageFadeIn {
+  from {
+    opacity: 0.65;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 
 /* Page navigation buttons */
 .page-nav {
@@ -120,7 +141,12 @@
     flex-direction: column;
   }
 
-  .pages-container img {
+  .pages-container.spread-1 img {
+    max-width: 95%;
+    max-height: 80vh;
+  }
+
+  .pages-container.spread-2 img {
     max-width: 90%;
     max-height: 40vh;
   }
