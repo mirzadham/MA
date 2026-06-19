@@ -3,17 +3,11 @@ function TrainingCard({ training, onClick }) {
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      onClick(training);
-    }
-  };
-
-  const handleKeyDown = (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault(); // Prevent page scroll on Space press
       onClick(training);
     }
   };
+
 
   return (
     <article
