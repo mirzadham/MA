@@ -1,78 +1,94 @@
+const CDN_BASE_URL = 'https://pub-33737b2aa9d84562932483aa2479fcaa.r2.dev';
+
 const trainings = [
-  // AI Category (5 trainings)
+  // Artificial Intelligence Category (2 trainings)
   {
     id: 1,
-    category: "AI",
-    title: "AI Fundamentals",
-    image: "/images/ai-system-thinking.png"
+    category: "Artificial Intelligence",
+    title: "AI System Thinking",
+    image: `${CDN_BASE_URL}/aisystemthinking.webp`,
+    pages: [1]
   },
   {
     id: 2,
-    category: "AI",
-    title: "Machine Learning Basics",
-    image: "/images/vibe-coding-1.png"
+    category: "Artificial Intelligence",
+    title: "Vibe Coding",
+    image: `${CDN_BASE_URL}/vibe-coding-1.webp`,
+    images: [`${CDN_BASE_URL}/vibe-coding-1.webp`, `${CDN_BASE_URL}/vibe-coding-2.webp`],
+    pages: [1, 2]
   },
+  // Data Science Category (1 training)
   {
     id: 3,
-    category: "AI",
-    title: "Deep Learning Essentials",
-    image: "/images/vibe-coding-2.png"
+    category: "Data Science",
+    title: "Certified Data Science Practitioner",
+    image: `${CDN_BASE_URL}/certified-data-science-practitioner-1.webp`,
+    images: [`${CDN_BASE_URL}/certified-data-science-practitioner-1.webp`, `${CDN_BASE_URL}/certified-data-science-practitioner-2.webp`],
+    pages: [1, 2]
   },
+  // Information Security Category (1 training)
   {
     id: 4,
-    category: "AI",
-    title: "Natural Language Processing",
-    image: "/images/vibe-coding-2.png"
+    category: "Information Security",
+    title: "Cybersecurity",
+    image: `${CDN_BASE_URL}/cybersecurity-1.webp`,
+    images: [`${CDN_BASE_URL}/cybersecurity-1.webp`, `${CDN_BASE_URL}/cybersecurity-2.webp`],
+    pages: [1, 2]
   },
+  // Engineering Category (1 training)
   {
     id: 5,
-    category: "AI",
-    title: "Computer Vision",
-    image: "/images/vibe-coding-1.png"
+    category: "Engineering",
+    title: "Electrical Engineering",
+    image: `${CDN_BASE_URL}/electrical-engineering-1.webp`,
+    images: [`${CDN_BASE_URL}/electrical-engineering-1.webp`, `${CDN_BASE_URL}/electrical-engineering-2.webp`],
+    pages: [1, 2]
+  },
+  // Project Management Category (1 training)
+  {
+    id: 6,
+    category: "Project Management",
+    title: "PMP",
+    image: `${CDN_BASE_URL}/pmp.webp`,
+    pages: [1]
   },
   // Semiconductor Category (4 trainings)
   {
-    id: 6,
-    category: "Semiconductor",
-    title: "Semiconductor Manufacturing",
-    image: "/images/electrical-engineering-1.png"
-  },
-  {
     id: 7,
     category: "Semiconductor",
-    title: "Chip Design Fundamentals",
-    image: "/images/electrical-engineering-2.png"
+    title: "Wafer Fabrication",
+    image: `${CDN_BASE_URL}/wafer-fabrication.webp`,
+    pages: [1]
   },
   {
     id: 8,
     category: "Semiconductor",
-    title: "Lithography Processes",
-    image: "/images/electrical-engineering-1.png"
+    title: "CMOS Amplifier Design",
+    image: `${CDN_BASE_URL}/cmosamplifierdesign.webp`,
+    pages: [1]
   },
   {
     id: 9,
     category: "Semiconductor",
-    title: "Quality Control",
-    image: "/images/electrical-engineering-2.png"
+    title: "Analytical & Failure Analysis",
+    image: `${CDN_BASE_URL}/analytical-failure-analysis.webp`,
+    pages: [1]
   },
-  // Data / Others Category (3 trainings)
   {
     id: 10,
-    category: "Data",
-    title: "Data Analytics",
-    image: "/images/certified-data-science-practitioner-1.png"
+    category: "Semiconductor",
+    title: "Nanoindentation",
+    image: `${CDN_BASE_URL}/nanoindentation.webp`,
+    pages: [1]
   },
+  // TTT Category (1 training)
   {
     id: 11,
-    category: "Data",
-    title: "Big Data Technologies",
-    image: "/images/certified-data-science-practitioner-2.png"
-  },
-  {
-    id: 12,
-    category: "Data",
-    title: "Data Visualization",
-    image: "/images/certified-data-science-practitioner-1.png"
+    category: "Train The Trainer",
+    title: "Train The Trainer",
+    image: `${CDN_BASE_URL}/ttt-1.webp`,
+    images: [`${CDN_BASE_URL}/ttt-1.webp`, `${CDN_BASE_URL}/ttt-2.webp`],
+    pages: [1, 2]
   }
 ];
 
