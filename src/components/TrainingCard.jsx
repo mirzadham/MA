@@ -1,13 +1,20 @@
 function TrainingCard({ training, onClick }) {
   const { id, title, image, category } = training;
 
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault(); // Prevent page scroll on Space press
+      onClick(training);
+    }
+  };
+
   return (
     <article
       className="card-glassmorphic"
       onClick={() => onClick(training)}
       role="button"
       tabIndex={0}
-      onKeyDown={(e) => e.key === 'Enter' && onClick(training)}
+      onKeyDown={handleKeyDown}
       aria-label={`Explore ${title} training`}
     >
       <div className="card-image-3d">

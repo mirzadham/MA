@@ -45,6 +45,7 @@ function App() {
     <div className="app">
       <Header isScrolled={isScrolled} />
       <main>
+        <h1 className="sr-only">MIMOS Academy Training Showcase</h1>
         <div className="filter-container">
           <CategoryFilter
             categories={uniqueCategories}
