@@ -35,4 +35,4 @@ lerna-debug.log*
 .vite/
 
 # Husky
-.husky/
+.husky/_/
