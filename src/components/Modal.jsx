@@ -33,9 +33,10 @@ function Modal({ training, onClose }) {
   };
 
   const getPageImage = (pageNum) => {
-    if (totalPages === 1) return training.image;
-    const baseName = training.image.replace(/-1\.png$/, '');
-    return `${baseName}-${pageNum}.png`;
+    if (training.images && training.images[pageNum - 1]) {
+      return training.images[pageNum - 1];
+    }
+    return training.image;
   };
 
   return (
