@@ -1,7 +1,21 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function CategoryFilter({ categories, selectedCategory, onCategoryChange }) {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof window !== 'undefined' ? window.matchMedia('(max-width: 767px)').matches : false
+  );
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return undefined;
+
+    const mediaQuery = window.matchMedia('(max-width: 767px)');
+    const updateIsMobile = () => setIsMobile(mediaQuery.matches);
+
+    updateIsMobile();
+    mediaQuery.addEventListener('change', updateIsMobile);
+
+    return () => mediaQuery.removeEventListener('change', updateIsMobile);
+  }, []);
 
   return (
     <div className="category-filter">

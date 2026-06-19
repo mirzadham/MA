@@ -1,5 +1,12 @@
 function TrainingCard({ training, onClick }) {
-  const { id, title, image, category } = training;
+  const { title, image, category } = training;
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      onClick(training);
+    }
+  };
 
   return (
     <article
@@ -7,7 +14,7 @@ function TrainingCard({ training, onClick }) {
       onClick={() => onClick(training)}
       role="button"
       tabIndex={0}
-      onKeyDown={(e) => e.key === 'Enter' && onClick(training)}
+      onKeyDown={handleKeyDown}
       aria-label={`Explore ${title} training`}
     >
       <div className="card-image-3d">
