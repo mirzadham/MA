@@ -3,15 +3,25 @@ import '../styles/modal.css';
 
 function Modal({ training, onClose }) {
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const pages = training ? training.pages || [1] : [1];
   const totalPages = pages.length;
-  const pagesPerSpread = 2;
+  const pagesPerSpread = isMobile ? 1 : 2;
 
-  // Reset page index when a new training is opened
+  // Reset page index when a new training is opened or view mode changes
   useEffect(() => {
     setCurrentPageIndex(0);
-  }, [training]);
+  }, [training, isMobile]);
 
   const handlePrev = () => {
     setCurrentPageIndex((prev) => Math.max(prev - pagesPerSpread, 0));
@@ -80,7 +90,7 @@ function Modal({ training, onClose }) {
               <i className="fas fa-chevron-left"></i>
             </button>
           )}
-          <div className="pages-container">
+          <div className={`pages-container spread-${currentSpreadPages.length}`}>
             {currentSpreadPages.map((pageNum, idx) => (
               <img
                 key={pageNum}
