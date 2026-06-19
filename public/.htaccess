@@ -19,5 +19,5 @@ Options -Indexes
     Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 
     # Content Security Policy (CSP)
-    Header set Content-Security-Policy "default-src 'self'; img-src 'self' https://pub-33737b2aa9d84562932483aa2479fcaa.r2.dev data:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline';"
+    Header set Content-Security-Policy "default-src 'self'; img-src 'self' https://pub-33737b2aa9d84562932483aa2479fcaa.r2.dev data:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; script-src 'self';"
 </IfModule>

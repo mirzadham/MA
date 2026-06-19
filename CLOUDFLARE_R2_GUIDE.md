@@ -14,7 +14,7 @@ Since your bucket is public, we need to upload the optimized WebP images so Clou
 1. Open your web browser and go to your **Cloudflare Dashboard** > **R2** > click **`training-programs`** bucket.
 2. In the **Objects** tab, click **Upload** > **Files**.
 3. Select **all** the `.webp` files from your local folder:
-   `c:\Users\ADMIN 2025\Documents\MA\src\assets\images_webp\`
+   `./src/assets/images_webp/`
 4. Upload them directly. 
    > [!IMPORTANT]
    > Do **NOT** create any folders in the bucket. Upload the files directly so they sit at the root level of the bucket.

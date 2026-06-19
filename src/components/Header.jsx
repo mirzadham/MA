@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import './../styles/main.css';
 
 function Header({ isScrolled }) {

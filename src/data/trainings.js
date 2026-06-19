@@ -1,7 +1,7 @@
 const CDN_BASE_URL = 'https://pub-33737b2aa9d84562932483aa2479fcaa.r2.dev';
 
 const trainings = [
-  // Artificial Intelligence Category (3 trainings)
+  // Artificial Intelligence Category (2 trainings)
   {
     id: 1,
     category: "Artificial Intelligence",
@@ -17,7 +17,7 @@ const trainings = [
     images: [`${CDN_BASE_URL}/vibe-coding-1.webp`, `${CDN_BASE_URL}/vibe-coding-2.webp`],
     pages: [1, 2]
   },
-  // Data Science Category (2 trainings)
+  // Data Science Category (1 training)
   {
     id: 3,
     category: "Data Science",
@@ -26,7 +26,7 @@ const trainings = [
     images: [`${CDN_BASE_URL}/certified-data-science-practitioner-1.webp`, `${CDN_BASE_URL}/certified-data-science-practitioner-2.webp`],
     pages: [1, 2]
   },
-  // Information Security Category (2 trainings)
+  // Information Security Category (1 training)
   {
     id: 4,
     category: "Information Security",
@@ -35,7 +35,7 @@ const trainings = [
     images: [`${CDN_BASE_URL}/cybersecurity-1.webp`, `${CDN_BASE_URL}/cybersecurity-2.webp`],
     pages: [1, 2]
   },
-  // Engineering Category (2 trainings)
+  // Engineering Category (1 training)
   {
     id: 5,
     category: "Engineering",
@@ -52,7 +52,7 @@ const trainings = [
     image: `${CDN_BASE_URL}/pmp.webp`,
     pages: [1]
   },
-  // Semiconductor Category (4 training)
+  // Semiconductor Category (4 trainings)
   {
     id: 7,
     category: "Semiconductor",

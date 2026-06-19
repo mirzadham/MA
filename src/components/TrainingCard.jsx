@@ -1,5 +1,12 @@
 function TrainingCard({ training, onClick }) {
-  const { id, title, image, category } = training;
+  const { title, image, category } = training;
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      onClick(training);
+    }
+  };
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
